@@ -19,7 +19,7 @@ export const Headers = () => {
                         <li>About</li>
                     </Link>
 
-                    <Link to='/signin'>
+                    <Link to='/sign-in'>
                         <li>Sign In</li>
                     </Link>
 
