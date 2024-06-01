@@ -4,10 +4,16 @@ import bcryptjs from 'bcryptjs'
 import jsonwebtoken from 'jsonwebtoken'
 import { errorHandler } from '../utils/error.js'
 
+
+// next is used to call the middleware
 export const signup = async (req, res, next) => {
 
     const { username, email, password } = req.body;
+
+    // using bcryptjs to hash the password 
     const hashedPassword = bcryptjs.hashSync(password, 10)
+
+    // creating the user in the database
     const newUser = new User({ username, email, password: hashedPassword })
 
 

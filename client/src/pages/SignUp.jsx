@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import Oauth from '../components/Oauth'
 
 export const SignUp = () => {
 
@@ -62,6 +63,7 @@ export const SignUp = () => {
                 <input type='password' placeholder='Password' id='password' className='bg-slate-100 p-3 rounded-lg' onChange={handleChange} />
 
                 <button disabled={loading} className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80 '> {loading ? 'Loading...' : 'Sign Up'} </button>
+                <Oauth />
             </form>
 
             <div className='flex gap-2 py-5'>
